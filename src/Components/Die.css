@@ -1,0 +1,19 @@
+.die-container h1{
+  color: #2B283A;
+  font-size: 1.5rem;
+}
+
+.die-container {
+  background-color: white;
+  padding: .5rem 1rem;
+  transition: all .3s;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px lightgray;
+  transform: translateY(0)
+}
+
+.die-container:hover {
+  transform: translateY(-10%);
+  background-color: #59E391;
+  cursor: pointer;
+}
