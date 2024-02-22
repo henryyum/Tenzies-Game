@@ -6,14 +6,19 @@ import Die from './Components/Die.jsx'
 
 function App() {
 
+  const styles = {
+    backgroundColor: "#59E391"
+  }
   const [dice, setdice] = useState(allNewDice())
 
-  const diceElements = dice.map(die => <Die value={die}/>)
+  const diceElements = dice.map(die => <Die value={die.value} isHeld={die.isHeld}/>)
 
   function allNewDice(){
     let randomArray = []
     for (let i = 1; i < 11; i++){
-      randomArray.push(Math.ceil(Math.random() * 6))
+      randomArray.push({
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false})
     }
     return randomArray
 
